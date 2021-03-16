@@ -11,6 +11,8 @@ import Review from './components/Review/Review';
 import Inventory from './components/Inventory/Inventory';
 import Error from './components/Error/Error';
 import Details from './components/Details/Details';
+import Login from './components/Login/Login';
+import Shipment from './components/Shipment/Shipment';
 
 
 
@@ -34,18 +36,23 @@ function App() {
             <Inventory></Inventory>
           </Route>
 
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+
+          <Route path="/shipment">
+            <Shipment></Shipment>
+          </Route>
+
           <Route path="/product/:productKey">
             <Details></Details>
           </Route>
-
-          <Route  path="*">
-            <Error></Error>
-          </Route>
-
           <Route exact path="/">
             <Shop></Shop>
           </Route>
-
+          <Route path="*">
+            <Error></Error>
+          </Route>
         </Switch>
       </Router>
     </div>
